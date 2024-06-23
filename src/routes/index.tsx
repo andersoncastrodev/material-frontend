@@ -1,3 +1,4 @@
+import { Button, ButtonBase } from "@mui/material";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 export default function AppRouter() {
@@ -8,7 +9,7 @@ export default function AppRouter() {
         <Routes>
 
             {/*Rota 1 */}
-            <Route path="/pagina-inicial" element={ <p> Primeira Pagina </p> } />
+            <Route path="/pagina-inicial" element={ <Button variant="contained" >Salvar</Button>  }/>
 
            
             {/*Rota 2 */}
