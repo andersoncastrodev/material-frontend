@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./routes";
-import { ThemeProvider } from "@emotion/react";
-import { LightThemes } from "./shared/themes";
+import { AppThemeProvider } from "./shared/contexts/ThemesContext";
+import { MenuLateral } from "./shared/components";
 
 
 export default function App() {
@@ -9,15 +9,22 @@ export default function App() {
   return (
 
     // Inicio dos Temas //
-    <ThemeProvider theme={ LightThemes } >
+    <AppThemeProvider>
+
+       
 
         <BrowserRouter> {/* Inicio das Rotas */}
 
-          <AppRouter/> {/* Componete que faz as Rotas */}
+          {/* Menu Lateral */}
+          <MenuLateral>
+
+                <AppRouter/> {/* Componete que faz as Rotas */}
+
+          </MenuLateral>
         
         </BrowserRouter> {/* Fim da Rotas */}
 
-    </ThemeProvider>
+    </AppThemeProvider>
      // Fim dos Temas //
 
   );

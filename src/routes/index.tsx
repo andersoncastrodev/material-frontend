@@ -1,7 +1,11 @@
 import { Button, ButtonBase } from "@mui/material";
 import { Routes, Route, Navigate } from "react-router-dom";
+import { useAppThemeContext } from "../shared/contexts";
 
 export default function AppRouter() {
+
+    //Configurando botão que toca o tema:
+    const{toggleTheme} = useAppThemeContext();
 
     return(
 
@@ -9,7 +13,8 @@ export default function AppRouter() {
         <Routes>
 
             {/*Rota 1 */}
-            <Route path="/pagina-inicial" element={ <Button variant="contained" >Salvar</Button>  }/>
+            <Route path="/pagina-inicial" element={ 
+                <Button variant="contained" onClick={toggleTheme} >Mudar Tema</Button>  }/>
 
            
             {/*Rota 2 */}
