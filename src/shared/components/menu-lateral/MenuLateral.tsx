@@ -1,5 +1,6 @@
-import { Avatar, Box, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useTheme } from "@mui/material"
-import { deepOrange, deepPurple } from "@mui/material/colors";
+import { Avatar, Box, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from "@mui/material"
+import { deepPurple } from "@mui/material/colors";
+import { useDrawerContext } from "../../contexts";
 
 //2°
 interface IMenuLateralProps {
@@ -9,15 +10,27 @@ interface IMenuLateralProps {
 //1°
 export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
 
+
     //Pegar as propriedades do tema.
     const theme  = useTheme();
+
+    // Criando a Responsividade do Menu
+    const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+
+    //Reponsavel por Altera o Estado no MENU "Parecer e Esconder" 
+    // = Atravez da variavel "isDrawerOpen"
+    const { isDrawerOpen, toggleDrawerOpen } = useDrawerContext();
 
     return(
 
          <> 
-            <Drawer variant="permanent">
+            <Drawer open={ isDrawerOpen }  variant= {smDown ? "temporary" : "permanent"} 
+                onClose={toggleDrawerOpen}>
 
-             <Box width={theme.spacing(28)} height="100%" display="flex" flexDirection="column">
+             <Box width={theme.spacing(28)} 
+                  height="100%" 
+                  display="flex" 
+                  flexDirection="column">
            
                 {/* Adicionand o Logo Avatar */}
                 <Box width="100%" 
@@ -28,16 +41,10 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
                      marginTop={theme.spacing(1)}
                      marginBottom={theme.spacing(1)}>
                    
-                    {/* <Avatar sx={{ 
-                        bgcolor: deepOrange[500], 
-                        width: theme.spacing(12) , 
-                        height: theme.spacing(12) 
-                        }} variant="square"> AS </Avatar> */}
-
-                          <Avatar sx={{ 
-                            bgcolor: deepPurple[500], 
-                            height: theme.spacing(20), 
-                            width: theme.spacing(20)}}>AC</Avatar>
+                    <Avatar sx={{ 
+                     bgcolor: deepPurple[500], 
+                     height: theme.spacing(20), 
+                     width: theme.spacing(20)}}>AC</Avatar>
 
                 </Box>  
                 {/* Fim do Logo Avatar */}
@@ -70,7 +77,7 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
 
             </Drawer>
           
-            <Box height="100vh" marginLeft={theme.spacing(28)}>
+            <Box height="100vh" marginLeft={ smDown ? 0 : theme.spacing(28)}>
 
                  {children}
 

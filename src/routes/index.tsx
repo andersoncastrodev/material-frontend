@@ -1,11 +1,17 @@
 import { Button, ButtonBase } from "@mui/material";
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useAppThemeContext } from "../shared/contexts";
+
+import { useAppThemeContext} from "../shared/contexts";
+
+import { useDrawerContext } from "../shared/contexts";
 
 export default function AppRouter() {
 
     //Configurando botão que toca o tema:
     const{toggleTheme} = useAppThemeContext();
+
+    //Habilitar o esconder menu
+    const{ toggleDrawerOpen } = useDrawerContext();
 
     return(
 
@@ -14,9 +20,9 @@ export default function AppRouter() {
 
             {/*Rota 1 */}
             <Route path="/pagina-inicial" element={ 
-                <Button variant="contained" onClick={toggleTheme} >Mudar Tema</Button>  }/>
+                <Button variant="contained" onClick={toggleDrawerOpen} >Mudar Tema</Button>  }/>
+                
 
-           
             {/*Rota 2 */}
             <Route/>
 
