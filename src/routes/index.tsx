@@ -4,6 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useAppThemeContext} from "../shared/contexts";
 
 import { useDrawerContext } from "../shared/contexts";
+import { DashBorad } from "../pages";
 
 export default function AppRouter() {
 
@@ -19,8 +20,7 @@ export default function AppRouter() {
         <Routes>
 
             {/*Rota 1 */}
-            <Route path="/pagina-inicial" element={ 
-                <Button variant="contained" onClick={toggleDrawerOpen} >Mudar Tema</Button>  }/>
+            <Route path="/pagina-inicial" element={  <DashBorad/>  }/>
                 
 
             {/*Rota 2 */}
