@@ -1,6 +1,6 @@
 import { Avatar, Box, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, ListItemText, useMediaQuery, useTheme } from "@mui/material"
 import { deepPurple } from "@mui/material/colors";
-import { useDrawerContext } from "../../contexts";
+import { useAppThemeContext, useDrawerContext } from "../../contexts";
 import React from "react";
 import { useMatch, useNavigate, useResolvedPath } from "react-router";
 
@@ -65,6 +65,11 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
     //Reponsavel por Altera o Estado no MENU "Parecer e Esconder" 
     // = Atravez da variavel "isDrawerOpen"
     const { isDrawerOpen, toggleDrawerOpen } = useDrawerContext();
+
+
+    //Criando um alterador de Tema
+    const { toggleTheme} = useAppThemeContext();
+
 
     return (
 
@@ -131,6 +136,24 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
 
                     </Box>
                     {/* Fim do Menu */}
+
+
+                    <Box>
+                        {/* Menu Mudar o Tema */}
+                        <List component="nav" aria-label="main mailbox folders">
+
+                            <ListItemButton onClick={toggleTheme}>
+
+                                <ListItemIcon>
+                                    <Icon>dark_mode</Icon>
+                                </ListItemIcon>
+
+                                <ListItemText primary="Alternar Tema" />
+
+                            </ListItemButton>
+                        </List>
+                    </Box>
+
 
 
                 </Box>
