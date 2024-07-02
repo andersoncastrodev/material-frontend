@@ -1,5 +1,5 @@
 
-import { Box, Button, Divider, Icon, Paper, useTheme } from "@mui/material"
+import { Box, Button, Divider, Icon, Paper, Skeleton, useTheme } from "@mui/material"
 
 
 interface IFerramentasDeDetalheProps {
@@ -10,6 +10,13 @@ interface IFerramentasDeDetalheProps {
     mostrarBotaoApagar?: boolean;
     mostrarBotaoSalvar?: boolean;
     mostrarBotaoSalvarEFechar?: boolean;
+
+    //Skeleton - Load
+    mostrarBotaoNovoCarregando?: boolean;
+    mostrarBotaoVoltarCarregando?: boolean;
+    mostrarBotaoApagarCarregando?: boolean;
+    mostrarBotaoSalvarCarregando?: boolean;
+    mostrarBotaoSalvarEFecharCarregando?: boolean;
 
     aoClicarEmNovo?:() => void;
     aoClicarEmVoltar?:() => void;
@@ -26,7 +33,14 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
     mostrarBotaoVoltar = true,
     mostrarBotaoApagar = true,
     mostrarBotaoSalvar = true,
-    mostrarBotaoSalvarEFechar = false,
+    mostrarBotaoSalvarEFechar = true,
+
+    //Skeleton - Load
+    mostrarBotaoNovoCarregando = false,
+    mostrarBotaoVoltarCarregando = false,
+    mostrarBotaoApagarCarregando = false,
+    mostrarBotaoSalvarCarregando = false,
+    mostrarBotaoSalvarEFecharCarregando = false,
 
     aoClicarEmNovo,
     aoClicarEmVoltar,
@@ -51,8 +65,6 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
         alignItems="center"
         component={Paper} >
     
-            FerramentasDeDetalhes
-
             {/* COMO COMO SE FOSSE UM IF TERNARIO */}
             { mostrarBotaoSalvar && (
 
@@ -67,6 +79,8 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
             )}
 
+            <Skeleton width={110} height={60} />
+
             { mostrarBotaoSalvarEFechar && ( 
 
                 <Button
@@ -78,6 +92,8 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
                 Salvar e Voltar
                 </Button>        
             )}
+
+            <Skeleton width={180} height={60} />
             
             { mostrarBotaoApagar && (
 
@@ -90,6 +106,8 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
                 Apagar
                 </Button>
             )}
+
+            <Skeleton width={110} height={60} />
 
             { mostrarBotaoNovo && (
 
@@ -105,6 +123,7 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
                 </Button>
             )}
 
+            <Skeleton width={110} height={60} />
 
             <Divider variant="middle" orientation="vertical"/>
 
