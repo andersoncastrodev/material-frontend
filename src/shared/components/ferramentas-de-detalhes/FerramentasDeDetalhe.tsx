@@ -66,7 +66,7 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
         component={Paper} >
     
             {/* COMO COMO SE FOSSE UM IF TERNARIO */}
-            { mostrarBotaoSalvar && (
+            { ( mostrarBotaoSalvar && !mostrarBotaoSalvarCarregando ) && (
 
                 <Button
                 color='primary'
@@ -88,7 +88,7 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
             )}
      
-            { mostrarBotaoSalvarEFechar && ( 
+            { (mostrarBotaoSalvarEFechar && !mostrarBotaoSalvarEFecharCarregando ) && ( 
 
                 <Button
                 color='primary'
@@ -108,7 +108,7 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
             )}
 
             
-            { mostrarBotaoApagar && (
+            { (mostrarBotaoApagar && !mostrarBotaoApagarCarregando ) && (
 
                 <Button
                 color='primary'
@@ -120,9 +120,13 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
                 </Button>
             )}
 
-            <Skeleton width={110} height={60} />
+            { mostrarBotaoApagarCarregando && (
 
-            { mostrarBotaoNovo && (
+                <Skeleton width={110} height={60} />
+
+            )}
+           
+            { (mostrarBotaoNovo && !mostrarBotaoNovoCarregando) && (
 
                 <Button
                 color='primary'
@@ -136,7 +140,11 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
                 </Button>
             )}
 
-            <Skeleton width={110} height={60} />
+            { mostrarBotaoNovoCarregando && (
+
+               <Skeleton width={110} height={60} />
+
+            )}
 
             <Divider variant="middle" orientation="vertical"/>
 

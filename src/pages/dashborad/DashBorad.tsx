@@ -11,7 +11,8 @@ export const DashBorad = () => {
         barraDeFerramentas={ 
 
         // <BarraDeFerramentas mostrarInputBusca />
-        <FerramentasDeDetalhe/>
+        
+        <FerramentasDeDetalhe mostrarBotaoSalvarEFecharCarregando/>
         
         }>
 
