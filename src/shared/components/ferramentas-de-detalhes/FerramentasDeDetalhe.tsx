@@ -79,8 +79,15 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
             )}
 
-            <Skeleton width={110} height={60} />
+            {/* Só mostra o Skeleton de tiver ativo É um
+                If Ternario */}
 
+            { mostrarBotaoSalvarCarregando && (
+
+                <Skeleton width={110} height={60} />
+
+            )}
+     
             { mostrarBotaoSalvarEFechar && ( 
 
                 <Button
@@ -93,7 +100,13 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
                 </Button>        
             )}
 
-            <Skeleton width={180} height={60} />
+
+            { mostrarBotaoSalvarEFecharCarregando && (
+
+                <Skeleton width={180} height={60} />
+
+            )}
+
             
             { mostrarBotaoApagar && (
 
