@@ -12,7 +12,7 @@ export const DashBorad = () => {
 
         // <BarraDeFerramentas mostrarInputBusca />
         
-        <FerramentasDeDetalhe mostrarBotaoSalvarEFecharCarregando/>
+        <FerramentasDeDetalhe mostrarBotaoSalvarEFechar />
         
         }>
 
