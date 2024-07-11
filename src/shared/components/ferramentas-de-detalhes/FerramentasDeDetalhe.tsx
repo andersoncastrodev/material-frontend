@@ -127,7 +127,11 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
             )}
 
 
+            { (mostrarBotaoSalvarEFecharCarregando && !mdDown && !smDown) && (
 
+                <Skeleton width={180} height={60} />
+
+            )}
 
             
             { (mostrarBotaoApagar && !mostrarBotaoApagarCarregando ) && (
@@ -151,11 +155,7 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
                 </Button>
             )}
 
-            { mostrarBotaoApagarCarregando && (
 
-                <Skeleton width={110} height={60} />
-
-            )}
            
             { (mostrarBotaoNovo && !mostrarBotaoNovoCarregando && !smDown ) && (
 
