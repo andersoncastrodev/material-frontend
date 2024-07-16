@@ -183,11 +183,7 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
                 </Button>
             )}
 
-            { (mostrarBotaoNovoCarregando && !smDown) && (
-
-               <Skeleton width={110} height={60} />
-
-            )}
+    
 
             <Divider variant="middle" orientation="vertical"/>
 
