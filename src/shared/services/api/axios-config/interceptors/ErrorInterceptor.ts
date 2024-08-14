@@ -10,7 +10,5 @@ export const errorInterceptor = ( error: AxiosError )=> {
         // ver depois
     }
 
-
     return Promise.reject(error);
-
 }
