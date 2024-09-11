@@ -2,17 +2,17 @@ import axios from "axios";
 import { reponseInterceptor } from "./interceptors/ReponseInterceptor";
 import { errorInterceptor } from "./interceptors/ErrorInterceptor";
 
-// const Api = axios.create({
+const Api = axios.create({
 
-//     baseURL: 'htpp://localhost:3333'
-// });
+    baseURL: 'htpp://localhost:3333'
+});
 
 
-// Api.interceptors.response.use(
+Api.interceptors.response.use(
 
-//     (response) => reponseInterceptor(response),
+    (response) => reponseInterceptor(response),
 
-//     (error) => errorInterceptor(error)
-// )
+    (error) => errorInterceptor(error)
+)
 
-// export { Api }
+export { Api }
