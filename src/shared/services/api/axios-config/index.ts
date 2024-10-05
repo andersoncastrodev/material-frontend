@@ -4,7 +4,7 @@ import { errorInterceptor } from "./interceptors/ErrorInterceptor";
 
 const Api = axios.create({
 
-    baseURL: 'htpp://localhost:3333'
+    baseURL: 'http://localhost:8080/clientes'
 });
 
 
@@ -15,4 +15,6 @@ Api.interceptors.response.use(
     (error) => errorInterceptor(error)
 )
 
+//AQUI EXPORTADO ESSA INSTANCIA PARA API COMPLETA
+//PARA QUE POSSA SER ACESSADO DE QUALQUER PARTE DA API.
 export { Api }
