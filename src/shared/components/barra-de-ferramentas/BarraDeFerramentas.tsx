@@ -1,5 +1,6 @@
 
 import { Box, Button, Icon, Paper, TextField, useTheme } from "@mui/material";
+import { Environments } from "../../environments";
 
 
 
@@ -46,7 +47,11 @@ export const BarraDeFerramentas : React.FC<IBarraDeFerramentasProps> = ({
         { mostrarInputBusca && (
             <TextField 
               size="small" 
-              placeholder="Pesquisar..."
+
+              // placeholder="Pesquisar..."
+
+              placeholder= { Environments.INPUT_DE_BUSCA }
+
               value={textoBusca}
               onChange={(e)=> aoMudarTextoDeBusca?.( e.target.value ) }
             />
@@ -56,23 +61,24 @@ export const BarraDeFerramentas : React.FC<IBarraDeFerramentasProps> = ({
 
         <Box flex={1} display="flex" justifyContent="end">
 
+
         {/* E COMO SE FOSSE UM IF TERNARIO  */}
         { mostrarBotaoNovo && (
             
-            <Button
-              color='primary'
-              disableElevation={true}
-              variant='contained'
-              endIcon={<Icon>add</Icon>} 
-              onClick={aoClicarEmNovo} >
-                
+          <Button
+            color='primary'
+            disableElevation={true}
+            variant='contained'
+            endIcon={<Icon>add</Icon>} 
+            onClick={aoClicarEmNovo} >  
+
             {textoBotaoNovo}
-              
+        
           </Button>
         )}
     
         </Box>
-
+-
         
         </Box>
     );
