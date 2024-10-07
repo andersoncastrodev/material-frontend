@@ -78,7 +78,7 @@ export const BarraDeFerramentas : React.FC<IBarraDeFerramentasProps> = ({
         )}
     
         </Box>
--
+
         
         </Box>
     );
