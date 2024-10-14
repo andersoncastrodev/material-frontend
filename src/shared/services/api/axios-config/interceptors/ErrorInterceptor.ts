@@ -8,9 +8,9 @@ export const errorInterceptor = ( error: AxiosError )=> {
     }
 
     //Tratar se a pagina não existir
-    if(error.response?.status === 401) {
+    //  if(error.response?.status === 401) {
         // ver depois
-    }
+    //  }
 
     
     return Promise.reject(error);
