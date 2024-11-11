@@ -1,7 +1,7 @@
 import { AxiosResponse } from "axios"
 
 // Retorna a consulta. 
-// export const reponseInterceptor = ( response: AxiosResponse ) => {
+export const reponseInterceptor = ( response: AxiosResponse ) => {
 
-//     return response;
-// }
+    return response;
+}
