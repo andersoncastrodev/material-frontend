@@ -5,7 +5,7 @@ import { Api } from "../axios-config";
 // } 
 
 
-// const getAll = async (): Promise<any> => {
+const getAll = async (): Promise<any> => {
 
     try {
         const {data} = await Api.get('/clientes')
@@ -22,7 +22,7 @@ import { Api } from "../axios-config";
         console.error(error);
     }
 
-// }
+}
 
 export const ClienteService = {
 
