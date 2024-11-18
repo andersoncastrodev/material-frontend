@@ -32,10 +32,10 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }
     const navigate = useNavigate();
 
     //Usando para repassar a função onClick()
-    // const handelClick = ()=> {
-    //     onClick?.(); //Pegurta se EXISTE ou NAO " ?. "
-    //     navigate(to);
-    // }
+    const handelClick = ()=> {
+        onClick?.(); //Pegurta se EXISTE ou NAO " ?. "
+        navigate(to);
+    }
 
     return (
         <ListItemButton selected={!!match}  onClick={handelClick}>
