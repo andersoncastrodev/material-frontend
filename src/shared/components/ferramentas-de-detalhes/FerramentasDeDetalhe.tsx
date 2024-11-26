@@ -29,11 +29,11 @@ interface IFerramentasDeDetalheProps {
 export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
     textoBotaoNovo = 'Novo',
 
-    // mostrarBotaoNovo = true,
-    // mostrarBotaoVoltar = true,
-    // mostrarBotaoApagar = true,
-    // mostrarBotaoSalvar = true,
-    // mostrarBotaoSalvarEFechar = true,
+    mostrarBotaoNovo = true,
+    mostrarBotaoVoltar = true,
+    mostrarBotaoApagar = true,
+    mostrarBotaoSalvar = true,
+    mostrarBotaoSalvarEFechar = true,
 
     //Skeleton - Load
     mostrarBotaoNovoCarregando = false,
