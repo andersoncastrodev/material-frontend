@@ -42,11 +42,11 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
     mostrarBotaoSalvarCarregando = false,
     mostrarBotaoSalvarEFecharCarregando = false,
 
-    aoClicarEmNovo,
-    aoClicarEmVoltar,
-    aoClicarEmApagar,
-    aoClicarEmSalvar,
-    aoClicarEmSalvaEFechar
+    // aoClicarEmNovo,
+    // aoClicarEmVoltar,
+    // aoClicarEmApagar,
+    // aoClicarEmSalvar,
+    // aoClicarEmSalvaEFechar
 
 }) => {
 
