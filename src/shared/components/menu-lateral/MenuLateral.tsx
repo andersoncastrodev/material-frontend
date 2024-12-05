@@ -38,15 +38,15 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }
     }
 
     return (
-        <ListItemButton selected={!!match}  onClick={handelClick}>
+        // <ListItemButton selected={!!match}  onClick={handelClick}>
 
-            <ListItemIcon>
-                <Icon>{icon}</Icon>
-            </ListItemIcon>
+        //     <ListItemIcon>
+        //         <Icon>{icon}</Icon>
+        //     </ListItemIcon>
 
-            <ListItemText primary={label} />
+        //     <ListItemText primary={label} />
 
-        </ListItemButton>
+        // </ListItemButton>
 
     )
 }
