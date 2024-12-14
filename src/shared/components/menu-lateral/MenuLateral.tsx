@@ -122,14 +122,14 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
 
                             {/* Adicionand Novo componente e Tambem os
                                 Os parametros DELE. */}
-                            {/* <ListItemLink
+                            <ListItemLink
                                 to="/pagina-inicial"
                                 icon="home"
                                 label="Pagina Inicial"
                                 onClick={ smDown ? toggleDrawerOpen : undefined}
                                 // Se o tamanho da tela tiver grande
                                 // Não executar isso.
-                            /> */}
+                            />
 
                             
                         </List>
