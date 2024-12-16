@@ -13,9 +13,9 @@ export const useDrawerContext = () => {
 }
 
 // Interface para usar o "children "
-// interface IDrawerContextProps {
-//     children: React.ReactNode;
-// }
+interface IDrawerContextProps {
+    children: React.ReactNode;
+}
 
 // Componente que vai fazer a MUDANÇA no TAMANHO DO MENU para aparece 
 //e Esconder de acordo com a tela.
