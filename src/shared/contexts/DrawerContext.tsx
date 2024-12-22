@@ -29,11 +29,11 @@ export const AppDrawerProvider: React.FC<IDrawerContextProps> = ({ children }) =
 
     return (
 
-        // <DrawerContext.Provider value={{ isDrawerOpen, toggleDrawerOpen }}>
+        <DrawerContext.Provider value={{ isDrawerOpen, toggleDrawerOpen }}>
 
-        //     {children}
+            {children}
 
-        // </DrawerContext.Provider>
+        </DrawerContext.Provider>
 
     );
 }
