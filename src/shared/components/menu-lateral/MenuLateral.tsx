@@ -97,7 +97,7 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
                             width: theme.spacing(20)
                         }}>AC</Avatar>
 
-//</Box>
+                    </Box>
                     {/* Fim do Logo Avatar */}
 
                     <Divider />
