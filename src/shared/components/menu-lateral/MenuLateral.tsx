@@ -144,9 +144,9 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
 
                             <ListItemButton onClick={toggleTheme}>
 
-                                <ListItemIcon>
+                                {/* <ListItemIcon>
                                     <Icon>dark_mode</Icon>
-                                </ListItemIcon>
+                                </ListItemIcon> */}
 
                                 <ListItemText primary="Alternar Tema" />
 
