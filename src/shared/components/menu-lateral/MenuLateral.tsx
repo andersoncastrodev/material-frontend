@@ -142,7 +142,7 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
                         {/* Menu Mudar o Tema */}
                         <List component="nav" aria-label="main mailbox folders">
 
-                            <ListItemButton onClick={toggleTheme}>
+                            {/* <ListItemButton onClick={toggleTheme}>
 
                                 <ListItemIcon>
                                     <Icon>dark_mode</Icon>
@@ -150,7 +150,7 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
 
                                 <ListItemText primary="Alternar Tema" />
 
-                            </ListItemButton>
+                            </ListItemButton> */}
                         </List>
                     </Box>
 
