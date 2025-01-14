@@ -12,13 +12,13 @@ interface IMenuLateralProps {
 
 //Criando uma novo componente PARA FAZER LINK do MENU
 
-interface IListItemLinkProps {
-    to: string;
-    icon: string;
-    label: string;
-    onClick: ( () => void )  | undefined ; //Definindo Se pode Existe ou NÃO.
-    // expresão não obrigatoria ex:  (  ) | undefined
-}
+// interface IListItemLinkProps {
+//     to: string;
+//     icon: string;
+//     label: string;
+//     onClick: ( () => void )  | undefined ; //Definindo Se pode Existe ou NÃO.
+//     // expresão não obrigatoria ex:  (  ) | undefined
+// }
 
 const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }) => {
 
