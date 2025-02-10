@@ -25,8 +25,8 @@ const ListItemLink: React.FC<IListItemLinkProps> = ({ to, icon, label, onClick }
     //PARA SABER EM QUAL MENU foi SELECIONANDO.
     //Para deixa a aplicação mais profissonal.
 
-    // const resolverPath = useResolvedPath(to);//É da biblioteca React
-    // const match = useMatch({path: resolverPath.pathname, end:false })//É da biblioteca React
+    const resolverPath = useResolvedPath(to);//É da biblioteca React
+    const match = useMatch({path: resolverPath.pathname, end:false })//É da biblioteca React
    
    
     const navigate = useNavigate();
