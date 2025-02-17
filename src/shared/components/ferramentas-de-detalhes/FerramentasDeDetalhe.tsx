@@ -55,8 +55,8 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
     const theme = useTheme();
 
     //Pegar as Medinda do Layout do Material UI Para fazer Responvidade.
-    // const smDown = useMediaQuery(theme.breakpoints.down('sm'));
-    // const mdDown =  useMediaQuery(theme.breakpoints.down('md'));
+    const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+    const mdDown =  useMediaQuery(theme.breakpoints.down('md'));
 
     return(
 
