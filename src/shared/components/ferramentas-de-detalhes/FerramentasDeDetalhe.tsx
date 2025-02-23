@@ -60,15 +60,15 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
     return(
 
-        // <Box 
-        // height={theme.spacing(5)}
-        // marginX={1}
-        // padding={1}
-        // paddingX={2}
-        // display="flex"
-        // gap={1}
-        // alignItems="center"
-        // component={Paper} >
+        <Box 
+        height={theme.spacing(5)}
+        marginX={1}
+        padding={1}
+        paddingX={2}
+        display="flex"
+        gap={1}
+        alignItems="center"
+        component={Paper} >
     
             {/* COMO COMO SE FOSSE UM IF TERNARIO */}
             { ( mostrarBotaoSalvar && !mostrarBotaoSalvarCarregando ) && (
