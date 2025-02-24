@@ -96,12 +96,12 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
             {/* Só mostra o Skeleton de tiver ativo É um
                 If Ternario */}
-
+{/* 
             { mostrarBotaoSalvarCarregando && (
 
                 <Skeleton width={110} height={60} />
 
-            )}
+            )} */}
      
             { (mostrarBotaoSalvarEFechar && !mostrarBotaoSalvarEFecharCarregando 
 
