@@ -107,12 +107,12 @@ export const FerramentasDeDetalhe: React.FC<IFerramentasDeDetalheProps> = ({
 
                 && !mdDown && !smDown ) && ( 
 
-                <Button
-                color='primary'
-                disableElevation={true}
-                variant='outlined'
-                onClick={aoClicarEmSalvaEFechar}
-                startIcon={<Icon>save</Icon>}>
+                // <Button
+                // color='primary'
+                // disableElevation={true}
+                // variant='outlined'
+                // onClick={aoClicarEmSalvaEFechar}
+                // startIcon={<Icon>save</Icon>}>
 
                 <Typography 
                     variant="button" 
