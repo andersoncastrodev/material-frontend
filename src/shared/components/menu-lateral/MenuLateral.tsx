@@ -83,13 +83,13 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
                     flexDirection="column">
 
                     {/* Adicionand o Logo Avatar */}
-                    <Box width="100%"
+                    {/* <Box width="100%"
                         height={theme.spacing(20)}
                         display="flex"
                         alignContent="center"
                         justifyContent="center"
                         marginTop={theme.spacing(1)}
-                        marginBottom={theme.spacing(1)}>
+                        marginBottom={theme.spacing(1)}> */}
 
                         <Avatar sx={{
                             bgcolor: deepPurple[500],
