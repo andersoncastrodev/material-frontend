@@ -77,10 +77,10 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
             <Drawer open={isDrawerOpen} variant={smDown ? "temporary" : "permanent"}
                 onClose={toggleDrawerOpen}>
 
-                <Box width={theme.spacing(28)}
+                {/* <Box width={theme.spacing(28)}
                     height="100%"
                     display="flex"
-                    flexDirection="column">
+                    flexDirection="column"> */}
 
                     {/* Adicionand o Logo Avatar */}
                     <Box width="100%"
