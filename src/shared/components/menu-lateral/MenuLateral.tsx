@@ -91,11 +91,11 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
                         marginTop={theme.spacing(1)}
                         marginBottom={theme.spacing(1)}>
 
-                        {/* <Avatar sx={{
+                        <Avatar sx={{
                             bgcolor: deepPurple[500],
                             height: theme.spacing(20),
                             width: theme.spacing(20)
-                        }}>AC</Avatar> */}
+                        }}>AC</Avatar>
 
                     </Box>
                     {/* Fim do Logo Avatar */}
